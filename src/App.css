@@ -1,3 +1,84 @@
 li {
   list-style: none;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.NavBar {
+  border: solid;
+  display: flex;
+  justify-content: space-around;
+}
+
+.LinkWrapper {
+  border: solid;
+  border-bottom: none;
+  border-top: none;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  background-color: rgb(204, 89, 89);
+}
+
+.NameWrapper {
+  background-color: rgb(181, 145, 101);
+  border: groove 11px;
+  width: 150px;
+  text-align: center;
+  border-radius: 7px;
+  z-index: 0;
+}
+
+.ListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: solid red 1px;
+  gap: 10px;
+  padding: 1px 30px;
+  overflow: scroll;
+  max-width: 700px;
+  max-height: 300px;
+  background-color: grey;
+  padding: 30px 0;
+}
+.ListWrapper {
+  border: solid;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.SinglePupWrapper {
+  border: solid;
+  margin: 30px;
+}
+
+.SinglePupContainer {
+  border: solid;
+}
+
+.PuppyPicture {
+  overflow: hidden;
+  max-height: 400px;
+  width: max-content;
+}
+
+img {
+  max-height: 400px;
+}
+
+.PupForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.FormContainer {
+  border: solid;
+  padding: 100px;
+}

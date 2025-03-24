@@ -1,4 +1,4 @@
-import FetchPuppy from "../api";
+import {FetchPuppy, FetchSinglePuppy} from "../api";
 import RenderAllPlayers from "./RenderAllPlayers";
 
 function PlayerList() {
@@ -7,13 +7,12 @@ function PlayerList() {
 
 
     return ( 
-        <div>
-            <ul>
+        <div className="ListWrapper">
+            <div className="ListContainer">
                 <RenderAllPlayers />
-            </ul>
+            </div>
         </div>
-
-     );
+);
 }
 
 export default PlayerList;

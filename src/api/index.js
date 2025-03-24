@@ -1,7 +1,7 @@
-const apiUrl = "https://fsa-puppy-bowl.herokuapp.com/api/2505-ftb-et-web-ft/players"
+const apiUrl = "https://fsa-puppy-bowl.herokuapp.com/api/2502-FTB-ET-WEB-FT/players"
 
 
-async function FetchPuppy() {
+export async function FetchPuppy() {
 
 
     try {
@@ -13,10 +13,34 @@ async function FetchPuppy() {
     } catch (error) {
         console.error(error)
     }
+};
+
+export async function FetchSinglePuppy(pupId) {
+    try {
+        const response = await fetch(`${apiUrl}/${pupId}`)
+        const result = await response.json()
+        return result.data.player
+    } catch (error) {
+        console.error(error)
+    }
+    
+}
+
+export async function PostPuppy(data) {
+    try {
+        const response = await fetch(apiUrl, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(data)
+        }
+    )
+        const result = response.json()
+        console.log("post result =>", result)
+    } catch (error) {
+        console.error(error)
+    }
 }
 
 
 
-
-
-export default FetchPuppy;
+// export default {FetchPuppy, FetchSinglePuppy};
